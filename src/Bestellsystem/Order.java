@@ -1,19 +1,24 @@
 package Bestellsystem;
-import java.util.ArrayList;
 
 public class Order {
 
-	private ArrayList<Item> items = new ArrayList<Item>();
+	private Item[] items = new Item[22];
+	private int positions;
+	
+	public Order()
+	{
+		positions = 0;
+	}
 
 	public float getTotalPrice() {
 		float total = 0;
-		for (Item i : items) {
-			total += i.getPrice();
+		for (int i = 0; i < positions; i++) {
+			total += items[i].getPrice();
 		}
 		return total;
 	}
 
-	public ArrayList<Item> getItems() {
+	public Item[] getItems() {
 		return this.items;
 	}
 
@@ -24,12 +29,13 @@ public class Order {
 	}
 
 	public void addItem(Item itemToAdd) {
-		items.add(itemToAdd);
+		items[positions] = itemToAdd;
+		positions++;
 	}
 
 	public void print() {
-		for (Item i : items) {
-			i.print();
+		for (int i = 0; i < positions; i++) {
+			items[i].print();
 		}
 		System.out.println("Total: " + getTotalPrice());
 	}
