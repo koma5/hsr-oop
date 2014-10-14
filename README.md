@@ -1,4 +1,4 @@
 hsr-oop
 =======
 
-meine Übungaufgaben zum Informatikstudium an der HSR in Rapperswil
+meine Übungaufgaben im Modul Objektorientieerte Proggramierung zum Informatikstudium an der HSR in Rapperswil
