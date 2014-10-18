@@ -19,7 +19,7 @@ public class BracketChecker {
 				position++;
 				return validate();
 			}
-			else {
+			else if (isClosingBracket(inputString.charAt(position))){
 				int closingBracketType = brackets[1].indexOf(inputString.charAt(position));
 				int openingBracketType = brackets[0].indexOf((char)openedBrackets.pop());
 				
@@ -30,6 +30,10 @@ public class BracketChecker {
 				else {
 					return false;
 				}
+			}
+			else {
+				position++;
+				return validate();
 			}
 		}
 		else if (openedBrackets.peek() == null) {
@@ -48,6 +52,15 @@ public class BracketChecker {
 	
 	private boolean isOpeningBracket(char c) {
 		if (brackets[0].indexOf(c) > -1 ) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	private boolean isClosingBracket(char c) {
+		if (brackets[1].indexOf(c) > -1 ) {
 			return true;
 		}
 		else {

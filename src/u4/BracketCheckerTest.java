@@ -10,6 +10,10 @@ public class BracketCheckerTest {
 		bracketTest("Test5", "[()>", false);
 		bracketTest("Test6", "{)(][}", false);
 		bracketTest("Test7", "({)}", false);
+		bracketTest("Test8", "{hallo}", true);
+		bracketTest("Test9", "{ha<lo}", false);
+		bracketTest("Test10", "{ha(ll)o}", true);
+		bracketTest("Test11", "{hallo}LoL()", true);
 	}
 
 	private static void bracketTest(String testName, String input, boolean expected) {
