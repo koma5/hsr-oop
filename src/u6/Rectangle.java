@@ -46,4 +46,9 @@ public class Rectangle implements Shape {
 		return color;
 	}
 
+	@Override
+	public void draw(Visualization v) {
+		v.drawRectangle(x, y, width, height, color);
+	}
+
 }

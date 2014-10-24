@@ -23,4 +23,11 @@ public class TextBox extends Rectangle implements Text{
 	
 	
 
+	@Override
+	public void draw(Visualization v) {
+		super.draw(v);
+		v.drawText(super.getX(), super.getY(), text, textColor);
+	}
+
+
 }

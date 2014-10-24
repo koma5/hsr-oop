@@ -36,4 +36,9 @@ public class Circle implements Shape {
 		return color;
 	}
 
+	@Override
+	public void draw(Visualization v) {
+		v.drawCircle(x, y, radius, color);
+	}
+
 }
