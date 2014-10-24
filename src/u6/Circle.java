@@ -2,28 +2,38 @@ package u6;
 
 public class Circle implements Shape {
 
+	private int x, y, radius, color;
+
+	public Circle(int centerX, int centerY, int radius, int color) {
+		x = centerX;
+		y = centerY;
+		this.radius = radius;
+		this.color = color;
+	}
+
+	public int getRadius() {
+		return radius;
+	}
+
 	@Override
 	public int getX() {
-		// TODO Auto-generated method stub
-		return 0;
+		return x;
 	}
 
 	@Override
 	public int getY() {
-		// TODO Auto-generated method stub
-		return 0;
+		return y;
 	}
 
 	@Override
 	public void move(int x, int y) {
-		// TODO Auto-generated method stub
-		
+		this.x += x;
+		this.y += y;
 	}
 
 	@Override
 	public int getAreaColor() {
-		// TODO Auto-generated method stub
-		return 0;
+		return color;
 	}
 
 }
