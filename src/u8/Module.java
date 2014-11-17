@@ -12,17 +12,26 @@ public class Module implements Comparable<Module>{
 	}
 	
 	public boolean equals(Module other) {
-		if(name.equals(other.name)) {
-			return true;
-		}
-		else {
-			return false;
-		}
+		return name.equals(other.name);
 	}
 	
 	public int compareTo(Module other) {
 		return name.compareTo(other.name);
 	}
+	
+	/*
+	public int compareTo(Module other) {
+		int nameCompare = name.compareTo(other.name);
+		if(nameCompare == 0) {
+			return 0;
+		}
+		else if (prerequisites.size() > other.prerequisites.size()) {
+			return 1;
+		}
+		else {
+			return -1;
+		}
+	}*/
 	
 	@Override
 	public String toString() {
@@ -39,6 +48,10 @@ public class Module implements Comparable<Module>{
 	
 	public boolean removePrerequisite(Module module) {
 		return prerequisites.remove(module);
+	}
+	
+	public int getPrerequisitesCount() {
+		return prerequisites.size();
 	}
 	
 	public TreeSet<Module> getPrerequisites() {

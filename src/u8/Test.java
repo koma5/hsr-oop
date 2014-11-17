@@ -19,9 +19,9 @@ public class Test {
 					System.out.print(names[i] + " ");
 				}
 				System.out.println();
-				sch.printModules();
 			}
 			sch.printModules();
+			sch.print();
 		}
 	}
 }
