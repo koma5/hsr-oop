@@ -21,39 +21,8 @@ public class Module implements Comparable<Module>{
 	}
 	
 	public int compareTo(Module other) {
-		int stringCompare = name.compareTo(other.name);
-		
-		if (stringCompare == 0) {
-			return 0;
-		}
-		else if (stringCompare == 0 && prerequisites.size() < other.prerequisites.size()){
-			return 1;
-		}
-		else {
-			return -1;
-		}
+		return name.compareTo(other.name);
 	}
-	
-	/*
-	public int compareTo(Module other) {
-		if (name.equals(other.name))
-		{
-			//return name.compareTo(other.name);
-			return 0;
-		}
-		else if (prerequisites.size() < other.prerequisites.size())
-		{
-			return 1;
-		}
-		/*else if (prerequisites.size() > other.prerequisites.size())
-		{
-			return -1;
-		}
-		else {
-			
-			return -1;
-		}
-	}*/
 	
 	@Override
 	public String toString() {
