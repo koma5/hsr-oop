@@ -5,7 +5,7 @@ import java.util.TreeSet;
 public class Test {
 	public static void main(String[] args) throws Exception {
 		// Sample code to illustrate how the CatalogueReader could be used:
-		try (CatalogueReader reader = new CatalogueReader("StudyCatalogue.txt")) {
+		try (CatalogueReader reader = new CatalogueReader("src/u8/StudyCatalogue.txt")) {
 			String[] names;
 			
 			Schedule sch = new Schedule();
